@@ -1,0 +1,502 @@
+@keyframes slide {
+  0% {left:200px}
+  100%  {left:0px;}
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  body {
+    font-family: "Garamond", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  :root {
+    background-image: url(sep09.jpg);
+    --text-color: white;
+    background-size: cover;
+  }
+
+  #homeTitle{
+    font-size: 7rem;
+    text-align: center;
+    padding-top: 8%;
+  }
+
+  #homeNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 4%;
+  }
+
+  #homeNav li{
+    display: inline;
+    padding: 14px 30px;
+  }
+
+  #homeNav a{
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    padding: 1em;
+    font-size: 2rem;
+    border: 1px solid #ffffff;
+    padding: 14px 16px;
+  }
+
+  #welcome{
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  footer{
+    position: absolute;
+    bottom:1%;
+    right:1%
+  }
+
+  #nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+    background-color: #d8d8d8;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+
+  }
+
+  #nav li{
+    display: inline;
+    border-right: 1px solid #000000;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+
+  #nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    padding: 14px 16px;
+  }
+
+  #abtcontent{
+    display: flex;
+    
+  }
+
+  #abtcol{
+    display: flex;
+    flex-direction: column;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
+  }
+
+  img{
+    display: block;
+    width: 25vw;
+    animation-name: slide;
+    animation-duration: 2s;
+    position: relative;
+  }
+
+  #xp{
+    padding-left: 1%;
+  }
+
+  a{
+    color: var(--text-color)
+  }
+
+  #proj{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  #projtitle{
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2%;
+  }
+
+  #proj li{
+    font-size: 1.5em;
+  }
+
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    width: 25%;
+  }
+
+  caption{
+    font-size: 2rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  th, td{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  #contactForm{
+    padding-top: 1%;
+    text-align: center;
+  }
+
+  #email{
+    width: 20vw;
+  }
+
+  #messagebox{
+    width: 30vw;
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  
+  body {
+    font-family: "Garamond", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  :root {
+    background-image: url(sep09.jpg);
+    --text-color: white;
+    background-size: cover;
+  }
+
+  #homeTitle{
+    font-size: 8vw;
+    text-align: center;
+    padding-top: 3vh;
+  }
+
+  #homeNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 3vh;
+  }
+
+  #homeNav li{
+    display: block;
+    padding-bottom: 8vh;
+  }
+
+  #homeNav a{
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    padding: 1em;
+    font-size: 4vw;
+    border: 1px solid #ffffff;
+    padding: 14px 16px;
+  }
+
+  #welcome{
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  footer{
+    position: absolute;
+    bottom:1%;
+    right:1%;
+    font-size:1rem;
+  }
+
+  #nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+    background-color: #d8d8d8;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+
+  }
+
+  #nav li{
+    display: inline;
+    border-right: 1px solid #000000;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+
+  #nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    padding: 14px 16px;
+  }
+
+  #abtcontent{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #abtcol{
+    display: flex;
+    flex-direction: column;
+    padding-right: 3vw;
+    padding-left: 1%;
+    padding-top: 1%;
+  }
+
+  img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40vw;
+    animation-name: slide;
+    animation-duration: 2s;
+    position: relative;
+  }
+
+  #xp{
+    padding-left: 1%;
+  }
+
+  a{
+    color: var(--text-color)
+  }
+
+  figcaption{
+    text-align: center;
+    font-size: 1.25em;
+  }
+
+  #proj{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  #projtitle{
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2%;
+  }
+
+  #proj li{
+    font-size: 1.5em;
+    padding-bottom: 8vh;
+  }
+
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    width: 25%;
+  }
+
+  caption{
+    font-size: 2rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  th, td{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  #contactForm{
+    padding-top: 1%;
+    text-align: center;
+  }
+
+  #email{
+    width: 30vw;
+  }
+
+  #messagebox{
+    width: 60vw;
+  }
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  
+  body {
+    font-family: "Garamond", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  :root {
+    background-image: url(sep09.jpg);
+    --text-color: white;
+    background-size: cover;
+  }
+
+  #homeTitle{
+    font-size: 8vw;
+    text-align: center;
+    padding-top: 3vh;
+  }
+
+  #homeNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 3vh;
+  }
+
+  #homeNav li{
+    display: block;
+    padding-bottom: 8vh;
+  }
+
+  #homeNav a{
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    padding: 1em;
+    font-size: 4vw;
+    border: 1px solid #ffffff;
+    padding: 14px 16px;
+  }
+
+  #welcome{
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  footer{
+    position: absolute;
+    bottom:1%;
+    right:1%;
+    font-size:1rem;
+  }
+
+  #nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+    background-color: #d8d8d8;
+    padding-top: 0.5%;
+
+  }
+
+  #nav li{
+    border-bottom: 1px solid #000000;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+
+  #nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    padding-left: 14px;
+    padding-right: 65%;
+  }
+
+  #abtcontent{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #abtcol{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-right: 1%;
+  }
+
+  #hob{
+    margin-top: 0%;
+  }
+
+  #hobtitle{
+    margin-bottom: 2%;
+  }
+
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50vw;
+  }
+
+  figcaption{
+    font-size: 1em;
+    text-align: center;
+  }
+
+  #xp{
+    padding-left: 1%;
+  }
+
+  a{
+    color: var(--text-color)
+  }
+
+  #proj{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  #projtitle{
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2%;
+  }
+
+  #proj li{
+    font-size: 1.5em;
+    padding-bottom: 8vh;
+  }
+
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+  }
+
+  caption{
+    font-size: 2rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  th, td{
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  #contactForm{
+    padding-top: 1%;
+    text-align: center;
+  }
+
+  #email{
+    width: 50vw;
+  }
+
+  #messagebox{
+    width: 75vw;
+  }
+}

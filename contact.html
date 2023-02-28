@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hassan Khairi's Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>Hassan Khairi</h1>
+        <nav id="nav">
+
+          <ul>
+            <li> <a href="/home.html">Home</a> </li> 
+            <li> <a href="/about.html"> About Me </a> </li>
+            <li><a href="/projects.html"> My Projects </a></li>
+            <li><a href="/contact.html">Contact Me </a></li>
+          </ul>
+          
+        </nav>
+      </header>
+    </main>
+    <hr />
+    <div>
+      <table>
+        <caption>
+          Reachable at
+        </caption>
+
+        <colgroup>
+          <col span="2"/>
+        </colgroup>
+        <tr>
+          <th>Contact</th>
+          <th>Info</th>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>(661)-633-4568</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>hassankhairi2001@gmail.com</td>
+        </tr>
+      </table>
+    </div>
+
+    <hr />
+
+    <div id="contactForm">
+      <form>
+        <fieldset>
+          <legend>Send Me A Message:</legend>
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" /><br /><br />
+          <label for="email">Email:</label><br />
+          <input type="text" id="email" name="email" /><br /><br />
+
+          <label for="find">How did you find me?</label><br />
+
+          <select id="find">
+            <option value="irl">Real Life</option>
+            <optgroup label="Internet">
+              <option value="LI">LinkedIn</option>
+              <option value="SM">Social Media</option>
+            </optgroup>
+
+            <option value="else">Other</option>
+          </select>
+
+          <br /><br />
+          <label for="message">Message:</label><br />
+          <textarea id="messagebox"
+            id="message"
+            name="messagebox"
+            rows="4"
+          ></textarea>
+          <br /><br />
+          <button>Click Me!</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
