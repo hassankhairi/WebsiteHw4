@@ -29,6 +29,8 @@ export function blog(){
             date: postDate.value,
             summary: postSummary.value,
         }
+        
+        //add updated element to the local storage
         savedPosts.push(newPost);
         window.localStorage.setItem('posts', JSON.stringify(savedPosts));
         let entry = document.createElement("li");
@@ -40,9 +42,9 @@ export function blog(){
         editBut.setAttribute('class', 'editButton');
         deleteBut.setAttribute('class', 'deleteButton');
         updateBut.setAttribute('class', 'updateButton');
-        updateBut.innerHTML = "Update";
-        editBut.innerHTML = "Edit";
-        deleteBut.innerHTML = "Delete";
+        updateBut.innerHTML = '<i class="fa fa-arrow-down"></i>';
+        editBut.innerHTML = '<i class="fa fa-pencil"></i>';
+        deleteBut.innerHTML = '<i class="fa fa-trash"></i>';
 
         //text entry
         let newText = document.createTextNode(newPost.title + ", " + newPost.date + ", " + newPost.summary + " ");
@@ -63,7 +65,7 @@ export function blog(){
             listElem.remove();
         }));
 
-        //update post
+        //update blog entry
         Array.from(updateButtons).forEach(button => button.addEventListener('click', () => {            
             let savedPosts = JSON.parse(window.localStorage.getItem('posts'));
             let newPost = {
@@ -77,15 +79,14 @@ export function blog(){
             temp.textContent = edit;
             entry.append(editBut);
             entry.append(deleteBut);
-            entry.append(updateBut);
-            console.log(temp);
-            
+            entry.append(updateBut);            
         }));
 
-        //open edit screen
+        //pull up edit screen
         Array.from(editButtons).forEach(button => button.addEventListener('click', () => {
             editDialog.showModal();
         }));
+
 
     });
 
