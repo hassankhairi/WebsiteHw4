@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hassan Khairi's Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="crudstyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body id="about">
+    <main>
+      <h1>Hassan Khairi</h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/about.html"> About Me </a></li>
+          <li><a href="/projects.html"> My Projects </a></li>
+          <li><a href="/contact.html">Contact Me </a></li>
+          <li><a href="/nativedialogs.html">Native</a></li>
+          <li><a href="/customdialogs.html">Custom</a></li>
+          <li><a href="/crud.html">Crud</a></li>
+          <li><a href="/styledcrud.html">Crud Style</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <script type="text/javascript">
+      let postsList = [];
+      window.localStorage.setItem("posts", JSON.stringify(postsList));
+    </script>
+
+    <dialog id="entry">
+      <form method="dialog" id="form">
+        <p>What would you like to add?</p>
+        <p>Title</p>
+        <input type="text" id="title" size="20" />
+        <p>Date</p>
+        <input type="date" id="date" />
+        <p>Summary</p>
+        <input type="text" id="summary" />
+        <br /><br />
+        <button id="OK">Ok</button>
+        <button type="submit">Cancel</button>
+      </form>
+    </dialog>
+
+    <dialog id="editEntry">
+      <form method="dialog" id="form">
+        <p>What would you like to edit?</p>
+        <p>Title</p>
+        <input type="text" id="editTitle" size="20" />
+        <p>Date</p>
+        <input type="date" id="editDate" />
+        <p>Summary</p>
+        <input type="text" id="editSummary" />
+        <br /><br />
+        <button id="save">Close</button>
+      </form>
+    </dialog>
+
+    <div>
+        <h1 id="Head">Top Things of 2023</h1>
+        <ul id="list"></ul>
+
+        <button id="add">Add</button>
+    </div>
+
+    <script type="module">
+      import { blog } from "./blog.js";
+      blog();
+    </script>
+  </body>
+</html>

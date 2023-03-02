@@ -12,10 +12,12 @@ export function blog(){
     const list = document.getElementById("list");
     const editButtons = document.getElementsByClassName('editButton');
     const deleteButtons = document.getElementsByClassName('deleteButton');
+    const updateButtons = document.getElementsByClassName('updateButton');
 
     //Add button is clicked and dialog is opened
     addBut.addEventListener('click', () => {
         addDialog.showModal();
+        document.getElementById("form").reset();
     });
 
     //Ok button is clicked and entry is saved
@@ -30,12 +32,15 @@ export function blog(){
         savedPosts.push(newPost);
         window.localStorage.setItem('posts', JSON.stringify(savedPosts));
         let entry = document.createElement("li");
-        let editBut = document.createElement("button");
+        let updateBut = document.createElement("button");
         let deleteBut = document.createElement("button");
+        let editBut = document.createElement("button");
         editBut.setAttribute('class', 'editButton');
         deleteBut.setAttribute('class', 'deleteButton');
-        editBut.innerHTML = "Edit";
-        deleteBut.innerHTML = "Delete";
+        updateBut.setAttribute('class', 'updateButton');
+        updateBut.innerHTML = '<i class="fa-solid fa-check"></i>';
+        editBut.innerHTML = '<i class="fa fa-pen-to-square"></i>';
+        deleteBut.innerHTML = '<i class="fa fa-trash"></i>';
 
         //text entry
         let newText = document.createTextNode(newPost.title + ", " + newPost.date + ", " + newPost.summary + " ");
@@ -44,6 +49,7 @@ export function blog(){
         entry.append(newText);
         entry.append(editBut);
         entry.append(deleteBut);
+        entry.append(updateBut);
 
         //adding list element to list and closing the dialog
         list.append(entry);
@@ -55,8 +61,7 @@ export function blog(){
             listElem.remove();
         }));
 
-        Array.from(editButtons).forEach(button => button.addEventListener('click', () => {
-            editDialog.showModal();
+        Array.from(updateButtons).forEach(button => button.addEventListener('click', () => {            
             let savedPosts = JSON.parse(window.localStorage.getItem('posts'));
             let newPost = {
                 id: savedPosts.length,
@@ -64,7 +69,21 @@ export function blog(){
                 date: editDate.value,
                 summary: editSummary.value,
             }
+            let edit = newPost.title + ", " + newPost.date + ", " + newPost.summary + " ";
+            let temp = button.parentElement;
+            temp.textContent = edit;
+            entry.append(editBut);
+            entry.append(deleteBut);
+            entry.append(updateBut);
+            console.log(temp);
+            
         }));
+
+        Array.from(editButtons).forEach(button => button.addEventListener('click', () => {
+            editDialog.showModal();
+        }));
+
+
     });
 
 }

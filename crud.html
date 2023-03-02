@@ -18,6 +18,8 @@
           <li><a href="/contact.html">Contact Me </a></li>
           <li><a href="/nativedialogs.html">Native</a></li>
           <li><a href="/customdialogs.html">Custom</a></li>
+          <li><a href="/crud.html">Crud</a></li>
+          <li><a href="/styledcrud.html">Crud Style</a></li>
         </ul>
       </nav>
     </main>
@@ -28,7 +30,7 @@
     </script>
 
     <dialog id="entry">
-        <form method="dialog">
+        <form method="dialog" id="form">
             <p>What would you like to add?</p>
             <p>Title</p>
             <input type="text" id="title" size="20">
@@ -43,7 +45,7 @@
     </dialog>
 
     <dialog id="editEntry">
-        <form method="dialog">
+        <form method="dialog" id="form">
             <p>What would you like to edit?</p>
             <p>Title</p>
             <input type="text" id="editTitle" size="20">
@@ -52,8 +54,7 @@
             <p>Summary</p>
             <input type="text" id="editSummary">
             <br><br>
-            <button id="save">Save</button>
-            <button type="submit">Cancel</button>
+            <button id="save">Close</button>
         </form>
     </dialog>
 
