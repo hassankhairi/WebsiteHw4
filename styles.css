@@ -162,10 +162,7 @@
   
   #links {
     padding-top: 3%;
-    display: flex;
     text-align: center;
-    margin-left: 35vw;
-    margin-right: 10vw;
   }
 
   a.link{
