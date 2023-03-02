@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hassan Khairi's Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Custom Dialog</h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/about.html"> About Me </a></li>
+          <li><a href="/projects.html"> My Projects </a></li>
+          <li><a href="/contact.html">Contact Me </a></li>
+          <li><a href="/nativedialogs.html">Native</a></li>
+          <li><a href="/customdialogs.html">Custom</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <button id="ABtn">Alert</button><br>
+    <button id="CBtn">Confirm</button><br>
+    <button id="PBtn">Prompt</button><br>
+    <script type="text/javascript" src="node_modules\dompurify\dist\purify.js"></script> 
+    <script>
+        function con(){
+            document.getElementById("Result").innerHTML = "Confirm Result: True";
+        }
+
+        function noCon(){
+            document.getElementById("Result").innerHTML = "Confirm Result: False";
+        }
+
+        function ans(){
+            var x = document.getElementById("name").value;
+            x = DOMPurify.sanitize(x);
+            if(x){
+                document.getElementById("Result").innerHTML = "Prompt Result: " + x;
+            } else {
+                document.getElementById("Result").innerHTML = "Prompt Result: User didn't enter anything";
+            }
+        }
+
+        function noAns(){
+            document.getElementById("Result").innerHTML = "Prompt Result: User didn't enter anything";
+        }
+    </script>
+
+    <dialog id="alert">
+        <form method="dialog">
+            <p id="aRes"></p>
+            <button type="submit">Ok</button>
+        </form>
+    </dialog>
+
+    <dialog id="confirm">
+        <form id="form" method="dialog">
+            <p id="cRes"></p>
+            <button onclick="con()" type="submit">Ok</button>
+            <button onclick="noCon()" type="submit">Cancel</button>
+        </form>
+    </dialog>
+
+    <dialog id="prompt">
+        <form method="dialog">
+            <p id="pRes"></p>
+            <input type="text" id="name" name="name">
+            <button onclick="ans()" type="submit">Ok</button>
+            <button onclick="noAns()" type="submit">Cancel</button>
+        </form>
+    </dialog>
+
+    <output id="Result"></output>
+
+
+
+       
+
+    <script type="module">
+        import {customDialog} from './customdialog.js';
+
+        const Alert = document.getElementById("ABtn");
+        Alert.addEventListener("click", A);
+        const Confirm = document.getElementById("CBtn");
+        Confirm.addEventListener("click", C);
+        const Prompt = document.getElementById("PBtn");
+        Prompt.addEventListener("click", P);
+
+        function A() {
+            customDialog("A");
+        }
+
+        function C() {
+            customDialog("C");
+        }
+
+        function P() {
+            customDialog("P");
+        }
+
+    </script>
+
+  </body>
+</html>

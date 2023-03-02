@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hassan Khairi's Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Simple Dialog</h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/about.html"> About Me </a></li>
+          <li><a href="/projects.html"> My Projects </a></li>
+          <li><a href="/contact.html">Contact Me </a></li>
+          <li><a href="/nativedialogs.html">Native</a></li>
+          <li><a href="/customdialogs.html">Custom</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <button id="ABtn">Alert</button><br>
+    <button id="CBtn">Confirm</button><br>
+    <button id="PBtn">Prompt</button><br>
+    <button id="SBtn">Safer Prompt</button><br>
+    <output id="Result"></output><br>
+
+    <script type="text/javascript" src="node_modules\dompurify\dist\purify.js"></script>
+    
+    <script>
+        const Alert = document.getElementById("ABtn");
+        Alert.addEventListener("click", A);
+        const Confirm = document.getElementById("CBtn");
+        Confirm.addEventListener("click", C);
+        const Prompt = document.getElementById("PBtn");
+        Prompt.addEventListener("click", P);
+        const SafePrompt = document.getElementById("SBtn");
+        SafePrompt.addEventListener("click", S);
+
+        function A() {
+            alert("Alert activated");
+        }
+
+        function C() {
+            let CStat = confirm("Press a button!");
+            if(CStat){
+                document.getElementById("Result").innerHTML = "Confirm Result: True";
+            } else{
+                document.getElementById("Result").innerHTML = "Confirm Result: False";
+            }
+        }
+
+        function P() {
+            let person = prompt("Please enter your name");
+            if(person){
+                document.getElementById("Result").innerHTML = "Prompt Result: " + person;
+            } else {
+                document.getElementById("Result").innerHTML = "Prompt Result: User didn't enter anything";
+            }
+        }
+
+        function S() {
+            let person = prompt("Please enter your name", "Your name");
+
+            person = DOMPurify.sanitize(person);
+            if(person == ""){
+                document.getElementById("Result").innerHTML = "Prompt Result: User didn't enter anything";
+            } else {
+                document.getElementById("Result").innerHTML = "Prompt Result: " + person;
+            }
+        }
+
+    </script>
+  </body>
+</html>
