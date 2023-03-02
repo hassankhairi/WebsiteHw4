@@ -6,6 +6,9 @@ export function blog(){
     const postTitle = document.getElementById("title");
     const postDate = document.getElementById("date");
     const postSummary = document.getElementById("summary");
+    const editTitle = document.getElementById("editTitle");
+    const editDate = document.getElementById("editDate");
+    const editSummary = document.getElementById("editSummary");
     const list = document.getElementById("list");
     const editButtons = document.getElementsByClassName('editButton');
     const deleteButtons = document.getElementsByClassName('deleteButton');
@@ -54,6 +57,13 @@ export function blog(){
 
         Array.from(editButtons).forEach(button => button.addEventListener('click', () => {
             editDialog.showModal();
+            let savedPosts = JSON.parse(window.localStorage.getItem('posts'));
+            let newPost = {
+                id: savedPosts.length,
+                title: editTitle.value,
+                date: editDate.value,
+                summary: editSummary.value,
+            }
         }));
     });
 
